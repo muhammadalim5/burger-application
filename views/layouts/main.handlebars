@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+	<title>Burger Saver</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Permanent+Marker&family=Shadows+Into+Light&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<style>
+		ul {
+			margin-top: 4%;
+		}
+		#burgerName{
+		width: 400px !important;
+		align-items: center !important;	 
+		margin-left: 35%;
+		margin-bottom: 2%;
+
+		}
+		h1{
+			color: black;
+		}
+		h3{
+			color: black;
+		}
+		 
+	</style>
+
+	<div class="row justify-content-center" style="margin-top:5%">
+            <div class="col-6">
+                <div class="row">
+
+                    {{{ body }}}
+
+                </div>
+                <div class="row" style="text-align: center;">
+                    <form action="/api/create" method="POST">
+                        <textarea id="burgerName" type="text" name="burgerName" class="form-control"></textarea>
+                        <h5 style="color: black;"> Click the "Submit" button</h5>
+                        <button class="btn btn-primary btn-lg" style="margin-top: 2%;">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+</html>

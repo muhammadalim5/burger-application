@@ -1,0 +1,56 @@
+<h1 style="text-align: center; margin-top:10% ">Burger List </h1>
+
+
+
+<div style="margin-top: 5%;" class="row">
+	<div class="col-6">
+		<h3>Uneat Burger</h3>
+
+		<ul class="list-group ">
+			{{#each burger}}
+			{{#unless devoured}}
+
+			<form action='/api/burger/{{id}}' method="POST">
+				<div class="input-group mb-3">
+					<li class="form-control fas fa-hamburger">
+						<b>{{this.burger_name}}</b>
+							<span class="align-center"></span>
+					</li>
+					<span class="input-group-btn"></span>
+
+					<button type="submit" class="btn btn-secondary float-end">Devour it </button>
+
+					</span>
+				</div>
+			</form>
+			{{/unless}}
+			{{/each}}
+		</ul>
+
+	</div>
+	<div class="col-6">
+		<h3>Eat Burger</h3>
+		<div class="col">
+			<ul class="list-group mb-3 ">
+				{{#each burger}}
+				{{#if devoured}}
+				<li class="form-control fas fa-hamburger">
+					<b>{{this.burger_name}} </b>
+					<span class="float-end"></span>
+				</li>
+				{{/if}}
+				{{/each}}
+
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+
+</div>
+
